@@ -1,13 +1,14 @@
-gradio==4.37.2
+gradio==4.44.1
 torch==2.3.1
 torchaudio==2.3.1
+torchvision==0.18.1
 librosa==0.10.2.post1
 soundfile==0.12.1
-webrtcvad-wheels==2.0.14.post2
+webrtcvad-wheels==2.0.14
 speechbrain==0.5.16
 faster-whisper==1.0.2
 ctranslate2==4.3.1
-scikit-learn==1.4.2
+scikit-learn==1.7.1
 numpy==1.26.4
 matplotlib==3.8.4
 tqdm==4.66.4
