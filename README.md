@@ -2,9 +2,9 @@
 title: AwaazShield
 emoji: 🛡️
 colorFrom: green
-colorTo: slate
+colorTo: red
 sdk: gradio
-sdk_version: 4.37.2
+sdk_version: 4.44.1
 app_file: app/app.py
 pinned: false
 ---
