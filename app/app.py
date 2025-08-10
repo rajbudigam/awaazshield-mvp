@@ -34,7 +34,7 @@ def card_html(label, value, sub=None, color=ACCENT):
     return f"""
     <div style="background:white;border-radius:16px;padding:16px 18px;box-shadow:0 8px 24px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.06)">
       <div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:.08em">{label}</div>
-      <div style="font-size:20px;font-weight:700;color:{color};margin-top:4px">{value}</div>
+      <div style="font-size:20px;font-weight:700;color:{color};margin-top:4px'>{value}</div>
       {sub_html}
     </div>
     """
@@ -171,8 +171,7 @@ def load_example(idx: int, expected_digits: str):
 
 # App 
 with gr.Blocks(theme=gr.themes.Soft(primary_hue="green", neutral_hue="slate")) as demo:
-    # Make CPU free tier responsive
-    demo.queue(concurrency_count=1, max_size=8)
+    # (removed deprecated demo.queue(...) call)
 
     # Hero
     gr.HTML(f"""
@@ -229,5 +228,7 @@ with gr.Blocks(theme=gr.themes.Soft(primary_hue="green", neutral_hue="slate")) a
     reports_panel = gr.HTML(build_report_html())
 
 if __name__ == "__main__":
-    # On Spaces, just running app/app.py is enough
-    demo.launch()
+    import gradio as gr
+    print("Gradio version:", gr.__version__)  # will show in logs
+    demo.queue(max_size=8)  # keep if you want a queue
+    demo.launch(server_name="0.0.0.0", show_api=False, max_threads=2)
