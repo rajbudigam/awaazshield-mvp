@@ -10,8 +10,12 @@ import webrtcvad
 import torch
 import torchaudio
 from joblib import load as joblib_load
-from speechbrain.inference.speaker import SpeakerRecognition
-from faster_whisper import WhisperModel
+try:
+    from speechbrain.pretrained import SpeakerRecognition
+except Exception:
+    # fallback for older layouts
+    from speechbrain.inference.speaker import SpeakerRecognition
+    from faster_whisper import WhisperModel
 
 
 # Globals / device
