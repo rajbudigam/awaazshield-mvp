@@ -1,3 +1,14 @@
+---
+title: AwaazShield
+emoji: 🛡️
+colorFrom: green
+colorTo: slate
+sdk: gradio
+sdk_version: 4.37.2
+app_file: app/app.py
+pinned: false
+---
+
 # AwaazShield — Anti-Spoof + Speaker Verification MVP
 
 **Live demo:** (Hugging Face Spaces URL after deploy)
