@@ -9,7 +9,7 @@ app_file: app/app.py
 pinned: false
 ---
 
-# AwaazShield — Anti-Spoof + Speaker Verification MVP
+# AwaazShield - Anti-Spoof + Speaker Verification MVP
 
 **Live demo:** (Hugging Face Spaces URL after deploy)
 
@@ -24,3 +24,4 @@ pinned: false
 cd app
 python -m pip install -r requirements.txt
 python app.py
+
